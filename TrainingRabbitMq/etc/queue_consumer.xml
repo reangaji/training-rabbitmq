@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/consumer.xsd">
+    <consumer name="icube_training_rabbitmq" 
+            queue="icube_training_rabbitmq" 
+            connection="amqp" 
+            handler="Icube\TrainingRabbitMq\Model\MessageQueues\Training\Consumer::processMessage"/>
+    <consumer name="icube_training_rabbitmq_custom" 
+            queue="icube_training_rabbitmq_custom" 
+            connection="amqp" 
+            handler="Icube\TrainingRabbitMq\Model\MessageQueues\Training\Consumer::processMessageCustom"
+            consumerInstance="Icube\TrainingRabbitMq\Model\Consumer"/>
+</config>

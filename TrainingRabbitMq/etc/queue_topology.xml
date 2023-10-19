@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/topology.xsd">
+     <exchange name="icube.training" type="topic" connection="amqp">
+         <binding id="icube_training_rabbitmq" 
+                topic="icube.training.rabbitmq" 
+                destinationType="queue" 
+                destination="icube_training_rabbitmq"/>
+         <binding id="icube_training_rabbitmq_custom" 
+                topic="icube.training.rabbitmq.custom" 
+                destinationType="queue" 
+                destination="icube_training_rabbitmq_custom"/>
+     </exchange>
+</config>
